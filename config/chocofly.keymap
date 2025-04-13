@@ -11,11 +11,18 @@
 
 / {
     behaviors {
+        &msc {
+            x-input-code = <INPUT_REL_HWHEEL>;
+            y-input-code = <INPUT_REL_WHEEL>;
+            time-to-max-speed-ms = <300>;
+            acceleration-exponent = <0>;
+            trigger-period-ms = <32>;
+        };
         scroll_encoder: scroll_encoder {
-            compatible = "zmk,behavior-input-two-axis";
+            compatible = "zmk,behavior-sensor-rotate-var";
             #sensor-binding-cells = <2>;
             bindings = <&msc>, <&msc>;
-            tap-ms = <20>;
+            tap-ms = <10>;
         };
     };
     
