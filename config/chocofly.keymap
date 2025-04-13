@@ -12,7 +12,7 @@
         scroll_encoder: scroll_encoder {
             compatible = "zmk,behavior-sensor-rotate-var";
             #sensor-binding-cells = <2>;
-            bindings = <&msc SCRL_UP>, <&msc SCRL_DOWN>;
+            bindings = <&msc>, <&msc>;
             tap-ms = <20>;
         };
     };
@@ -35,7 +35,7 @@
     &kp LCTRL     &kp Z    &kp X    &kp C    &kp V         &kp B           &kp GRAVE   &kp INS     &kp PSCRN    &kp RBKT  &kp N           &kp M      &kp COMMA &kp DOT &kp FSLH &kp RCTRL
                                              &kp LGUI      &mt LSHFT EQUAL &lt 2 SPACE &mt LALT ESC &mt RALT RET &mo 1    &mt RSHFT MINUS &kp CAPS
             >;
-            sensor-bindings = <&scroll_encoder>;
+            sensor-bindings = <&scroll_encoder SCRL_UP SCRL_DOWN>;
         };
 
         lower_layer { // Layer 1
