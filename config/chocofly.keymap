@@ -8,16 +8,17 @@
 
 &lt { quick_tap_ms = <200>; };
 &mt { quick_tap_ms = <200>; };
+&msc {
+        x-input-code = <INPUT_REL_HWHEEL>;
+        y-input-code = <INPUT_REL_WHEEL>;
+        time-to-max-speed-ms = <300>;
+        acceleration-exponent = <0>;
+        trigger-period-ms = <32>;
+    };
 
 / {
     behaviors {
-        &msc {
-            x-input-code = <INPUT_REL_HWHEEL>;
-            y-input-code = <INPUT_REL_WHEEL>;
-            time-to-max-speed-ms = <300>;
-            acceleration-exponent = <0>;
-            trigger-period-ms = <32>;
-        };
+        
         scroll_encoder: scroll_encoder {
             compatible = "zmk,behavior-sensor-rotate-var";
             #sensor-binding-cells = <2>;
