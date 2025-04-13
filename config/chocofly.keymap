@@ -1,5 +1,5 @@
-#define ZMK_MOUSE_SCRL_VAL 60
-#define ZMK_POINTING_DEFAULT_SCRL_VAL 20
+#define ZMK_MOUSE_SCRL_VAL 160
+#define ZMK_POINTING_DEFAULT_SCRL_VAL 120
 
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
@@ -11,9 +11,9 @@
 &msc {
         x-input-code = <INPUT_REL_HWHEEL>;
         y-input-code = <INPUT_REL_WHEEL>;
-        time-to-max-speed-ms = <300>;
+        time-to-max-speed-ms = <100>;
         acceleration-exponent = <0>;
-        trigger-period-ms = <32>;
+        trigger-period-ms = <16>;
     };
 
 / {
@@ -23,7 +23,7 @@
             compatible = "zmk,behavior-sensor-rotate-var";
             #sensor-binding-cells = <2>;
             bindings = <&msc>, <&msc>;
-            tap-ms = <10>;
+            tap-ms = <100>;
         };
     };
     
