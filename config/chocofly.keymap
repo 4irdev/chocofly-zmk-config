@@ -1,5 +1,4 @@
-#define ZMK_MOUSE_SCRL_VAL 160
-#define ZMK_POINTING_DEFAULT_SCRL_VAL 120
+#define ZMK_POINTING_DEFAULT_SCRL_VAL 60
 
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
@@ -11,9 +10,10 @@
 &msc {
         x-input-code = <INPUT_REL_HWHEEL>;
         y-input-code = <INPUT_REL_WHEEL>;
-        time-to-max-speed-ms = <100>;
-        acceleration-exponent = <0>;
-        trigger-period-ms = <16>;
+        time-to-max-speed-ms = <200>;
+        acceleration-exponent = <1>;
+        delay-ms = <0>
+        trigger-period-ms = <8>;
     };
 
 / {
