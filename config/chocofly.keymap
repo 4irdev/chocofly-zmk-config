@@ -35,7 +35,7 @@
 // | C_BRI_DN|   C_BRI_UP   |    F3   | C_AC_SEARCH |   C_REC      |  F6            |                                              |  K_PREV       |  K_PP  |  K_NEXT  |  K_MUTE  | K_VOL_DN  | K_VOL_UP |
 // |   TAB   |      Q       |    W    |      E      |   R          |  T             |-----------                                   |  Y            |   U    |    I     |     O    |    P      |    [     |
 // |   \     |      A       |    S    |      D      |   F          |  G             | BT_LAYER |-----------------------------------|  H            |    J   |    K     |     L    |    ;      |    '     |
-// |   GUI   |      Z       |    X    |      C      |   V          |  B             |   GRAVE  |   INSERT   |   PR_SCR    |    ]   |  N            |    M   |    ,     |     .    |    /      |  R CTRL  |
+// |   GUI   |      Z       |    X    |      C      |   V          |  B             |   GRAVE  |   INSERT   |   PSCRN     |    ]   |  N            |    M   |    ,     |     .    |    /      |  R CTRL  |
 // -------------------------------------------------|   CTRL       |  SHIFT         |   SPACE  |   ESCAPE   |   ENTER     |    FN  |  R SHIFT      |   GUI  |---------------------------------------------
 //                                                  ---------------------------------------------------------------------------------------------------------
            bindings = <
