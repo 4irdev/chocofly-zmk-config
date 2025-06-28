@@ -4,7 +4,7 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/pointing.h>
-
+#include "keys_ru.h"
 
 &lt { quick_tap_ms = <200>; };
 &mt { quick_tap_ms = <200>; };
@@ -35,16 +35,16 @@
 // ----------------------------------------------------------------------------------                                                -----------------------------------------------------------------------
 // | C_BRI_DN|   C_BRI_UP   |    F3   | C_AC_SEARCH |   C_REC      |  F6            |                                                |  K_PREV       |  K_PP  |  K_NEXT  |  K_MUTE  | K_VOL_DN  | K_VOL_UP |
 // |   TAB   |      Q       |    W    |      E      |   R          |  T             |-----------                                     |  Y            |   U    |    I     |     O    |    P      |    [     |
-// |   \     |      A       |    S    |      D      |   F          |  G             | BT_LAYER |-------------------------------------|  H            |    J   |    K     |     L    |    ;      |    '     |
-// |   GUI   |      Z       |    X    |      C      |   V          |  B             |   GRAVE  |   INSERT   |   PSCRN       |    ]   |  N            |    M   |    ,     |     .    |    /      |  R CTRL  |
-// -------------------------------------------------|   CTRL       |  SHIFT         |   SPACE  |   ESCAPE   |   ENTER       |    FN  |  R SHIFT      |   GUI  |---------------------------------------------
+// |   \     |      A       |    S    |      D      |   F          |  G             | BT_LAYER |-------------------------------------|  H            |   J    |    K     |     L    |    ;      |    '     |
+// |   GUI   |      Z       |    X    |      C      |   V          |  B             |   GRAVE  |   INSERT   |   PSCRN       |    ]   |  N            |   M    |    ,     |     .    |    /      |  R CTRL  |
+// -------------------------------------------------|   CTRL       |  SHIFT         |   SPACE  |   ESCAPE   |   ENTER       |    FN  |  R SHIFT      | RU_LAY |---------------------------------------------
 //                                                  ---------------------------------------------------------------------------------------------------------
            bindings = <
     &kp C_BRI_DN  &kp C_BRI_UP &kp F3  &kp C_AC_SEARCH &kp C_REC     &lt 3 F6                                                         &kp C_PREV      &kp C_PP &kp C_NEXT &kp K_MUTE &kp K_VOL_DN &kp K_VOL_UP
     &kp TAB       &kp Q        &kp W   &kp E           &kp R         &kp T                                                            &kp Y           &kp U    &kp I      &kp O      &kp P        &kp LBKT
     &kp BSLH      &kp A        &kp S   &kp D           &kp F         &kp G           &mo 3                                            &kp H           &kp J    &kp K      &kp L      &kp SEMI     &kp SQT
     &kp LGUI      &kp Z        &kp X   &kp C           &kp V         &kp B           &kp GRAVE   &kp INS      &kp LG(LS(N4)) &kp RBKT &kp N           &kp M    &kp COMMA  &kp DOT    &kp FSLH     &kp RCTRL
-                                                       &kp LCTRL     &mt LSHFT EQUAL &lt 2 SPACE &mt LALT ESC &mt RALT RET   &mo 1    &mt RSHFT MINUS &kp CAPS
+                                                       &kp LCTRL     &mt LSHFT EQUAL &lt 2 SPACE &mt LALT ESC &mt RALT RET   &mo 1    &mt RSHFT MINUS &to 4
             >;
             sensor-bindings = <&scroll_encoder SCRL_UP SCRL_DOWN>;
         };
@@ -99,6 +99,25 @@
     &none        &none    &none    &none      &none       &none                                             &none      &none    &none       &none    &none    &none
     &trans       &none    &none    &none      &none       &none     &none      &none    &none       &none   &none      &none    &none       &none    &none    &trans
                                               &trans      &trans    &trans     &trans   &trans      &trans  &trans     &trans
+            >;
+            sensor-bindings = <&scroll_encoder SCRL_UP SCRL_DOWN>;
+        };
+
+
+        ru_layer { // Layer 4
+// -------------------------------------------------------------------------                                       -------------------------------------------------------------
+// |  BT_SEL 0  |  BT_SEL 1  |  BT_SEL 2  |         | BT_CLR_ALL | BT_CLR  |                                       | BT_PRV  |         | BT_NXT  |         |         | BT_DISC |
+// |            |            |            |         |            |         |----------                             |         |         |         |         |         |         |
+// |     ф      |      ы     |     в      |         |            |         |         |-----------------------------|         |         |         |         |         |         |
+// |    -       |            |            |         |            |         |         |         |         |         |         |         |         |         |         |    -    |
+// ---------------------------------------|     -   |    -       |    -    |    -    |    -    |    -    |    -    |    -    |--------------------------------------------------
+//                                        ------------------------------------------------------------------------------------
+            bindings = <
+    &bt BT_SEL 0        &bt BT_SEL 1          &bt BT_SEL 2      &none    &bt BT_CLR_ALL &bt BT_CLR                                     &bt BT_PRV &none    &bt BT_NXT  &none    &none   &bt BT_DISC
+    &none               &none                 &none             &none      &none       &none                                             &none      &none    &none       &none    &none    &none
+    &kp RU_CYRILLIC_EF  &kp RU_CYRILLIC_YERU  &RU_CYRILLIC_VE   &none      &none       &none                                             &none      &none    &none       &none    &none    &none
+    &trans              &none                 &none             &none      &none       &none     &none      &none    &none       &none   &none      &none    &none       &none    &none    &trans
+                                                                &trans     &trans    &trans     &trans   &trans      &trans  &trans     &trans
             >;
             sensor-bindings = <&scroll_encoder SCRL_UP SCRL_DOWN>;
         };
