@@ -53,7 +53,7 @@
     &kp TAB       &kp Q        &kp W   &kp E           &kp R         &kp T                                                            &kp Y           &kp U    &kp I      &kp O      &kp P        &kp LBKT
     &kp BSLH      &kp A        &kp S   &kp D           &kp F         &kp G           &mo 3                                            &kp H           &kp J    &kp K      &kp L      &kp SEMI     &kp SQT
     &kp LGUI      &kp Z        &kp X   &kp C           &kp V         &kp B           &kp GRAVE   &kp INS      &kp LG(LS(N4)) &kp RBKT &kp N           &kp M    &kp COMMA  &kp DOT    &kp FSLH     &kp RCTRL
-                                                       &kp LCTRL     &mt LSHFT EQUAL &lt 2 SPACE &mt LALT ESC &mt RALT RET   &ru_toggle &mt RSHFT MINUS &tog 4
+                                                       &kp LCTRL     &mt LSHFT EQUAL &lt 2 SPACE &mt LALT ESC &mt RALT RET   &mo 1    &mt RSHFT MINUS &ru_toggle
             >;
             sensor-bindings = <&scroll_encoder SCRL_UP SCRL_DOWN>;
         };
