@@ -63,14 +63,14 @@
 // |     C_BRI_DN           |        C_BRI_UP       |        F3            |    C_AC_SEARCH    |      C_REC       |        F6         |                                                                 |        K_PREV     |          K_PP             |          K_NEXT       |       K_MUTE      |      K_VOL_DN     |     K_VOL_UP     |
 // |        -               |           й           |         ц            |       у           |        к         |        е          |----------                                                       |        н          |           г               |            ш          |         з         |         х         |        б         |
 // |        -               |           ф           |         ы            |       в           |        а         |        п          |    -    |-------------------------------------------------------|        р          |           о               |            л          |         д         |         ж         |        э         |
-// |        -               |           я           |         ч            |       с           |        м         |        и          |         |       ю           |           ъ           |           |        т          |           ь               |            .          |         ,         |         /         |        -         |
+// |        -               |           я           |         ч            |       с           |        м         |        и          |         |       ю           |           ъ           |           |        т          |           ь               |            ,          |         .         |         /         |        -         |
 // ------------------------------------------------------------------------|       -           |        -         |        -          |    -    |       -           |           -           |    FN     |        -          |           -               |-----------------------------------------------------------------------------------
 //                                                                         ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
             bindings = <
             &trans                  &trans                &trans            &trans              &trans              &trans                                                                                &trans               &trans                     &trans                  &trans              &trans               &trans
             &trans           &kp RU_CYRILLIC_SHORT_I  &kp RU_CYRILLIC_TSE   &kp RU_CYRILLIC_U   &kp RU_CYRILLIC_KA  &kp RU_CYRILLIC_IE                                                                    &kp RU_CYRILLIC_EN   &kp RU_CYRILLIC_GHE        &kp RU_CYRILLIC_SHA     &kp RU_CYRILLIC_ZE  &kp RU_CYRILLIC_HA   &kp RU_CYRILLIC_BE
             &trans           &kp RU_CYRILLIC_EF       &kp RU_CYRILLIC_YERU  &kp RU_CYRILLIC_VE  &kp RU_CYRILLIC_A   &kp RU_CYRILLIC_PE  &trans                                                            &kp RU_CYRILLIC_ER   &kp RU_CYRILLIC_O          &kp RU_CYRILLIC_EL      &kp RU_CYRILLIC_DE  &kp RU_CYRILLIC_ZHE  &kp RU_CYRILLIC_E   
-            &trans           &kp RU_CYRILLIC_YA       &kp RU_CYRILLIC_CHE   &kp RU_CYRILLIC_ES  &kp RU_CYRILLIC_EM  &kp RU_CYRILLIC_I   &trans  &kp RU_CYRILLIC_YU   &kp RU_CYRILLIC_HARD_SIGN  &trans    &kp RU_CYRILLIC_TE   &kp RU_CYRILLIC_SOFT_SIGN  &kp RU_DOT              &kp RU_COMMA        &kp RU_FSLH               
+            &trans           &kp RU_CYRILLIC_YA       &kp RU_CYRILLIC_CHE   &kp RU_CYRILLIC_ES  &kp RU_CYRILLIC_EM  &kp RU_CYRILLIC_I   &trans  &kp RU_CYRILLIC_YU   &kp RU_CYRILLIC_HARD_SIGN  &trans    &kp RU_CYRILLIC_TE   &kp RU_CYRILLIC_SOFT_SIGN  &kp DOT                 &kp COMMA        &kp RU_FSLH               
                                                                             &trans              &trans              &trans              &trans  &trans                     &trans               &mo 2     &trans               &trans
             >;
             sensor-bindings = <&scroll_encoder SCRL_UP SCRL_DOWN>;
@@ -112,7 +112,7 @@
             sensor-bindings = <&scroll_encoder SCRL_UP SCRL_DOWN>;
         };
 
-        ble_layer { // Layer 3
+        ble_layer { // Layer 4
 // -------------------------------------------------------------------------                                       -------------------------------------------------------------
 // |  BT_SEL 0  |  BT_SEL 1  |  BT_SEL 2  |         | BT_CLR_ALL | BT_CLR  |                                       | BT_PRV  |         | BT_NXT  |         |         | BT_DISC |
 // |            |            |            |         |            |         |----------                             |         |         |         |         |         |         |
