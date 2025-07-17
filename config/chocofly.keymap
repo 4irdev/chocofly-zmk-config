@@ -31,18 +31,14 @@
         ru_switch: ru_switch {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings =  <&macro_tap &tog 1>, <&macro_tap &kp LC(LS(S))>;
-            wait-ms = <50>;
-            tap-ms = <5>;
+            bindings =  <&macro_tap &kp LC(LS(S))>, <&macro_tap &tog 1>;
         };
 
         // Custom macro to switch to English layer and switch language
         en_switch: en_switch {
             compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =  <&macro_tap &tog 0>, <&macro_tap &kp LC(LS(W))>;
-            wait-ms = <50>;
-            tap-ms = <5>;
+            #binding-cells = <1>;
+            bindings =  <&macro_tap &kp LC(LS(W))>, <&macro_tap &tog 0>;
         };
     };
     
