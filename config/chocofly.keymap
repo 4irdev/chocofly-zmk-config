@@ -32,15 +32,15 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =  <&macro_tap &kp LC(LS(S))>, <&macro_tap &tog 1>;
-            tap-ms = <100>
+            tap-ms = <100>;
         };
 
         // Custom macro to switch to English layer and switch language
         en_switch: en_switch {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings =  <&macro_tap &tog 0>, <&macro_tap &kp LC(LS(W))>;
-            tap-ms = <100>
+            bindings =  <&macro_tap &kp LC(LS(W))>, <&macro_tap &tog 0>;
+            tap-ms = <100>;
         };
     };
     
