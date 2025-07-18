@@ -101,7 +101,7 @@
             sensor-bindings = <&scroll_encoder SCRL_UP SCRL_DOWN>;
         };
 
-        raise_layer { // Layer 3 ENG punctuation marks
+        punc_eng_layer { // Layer 3 ENG punctuation marks
 // -------------------------------------------------------------                                        -------------------------------------------------------------
 // |         |         |         |         |         |         |                                       |         |         |         |         |         |         |
 // |         |         |         |    [    |    ]    |    BSPC |----------                             |  DEL    |    !    |    @    |    #    |         |         |
@@ -120,7 +120,7 @@
         };
 
 
-        raise_layer { // Layer 4 RU punctuation marks
+        punc_ru_layer { // Layer 4 RU punctuation marks
 // -------------------------------------------------------------                                        -------------------------------------------------------------
 // |         |         |         |         |         |         |                                       |         |         |         |         |         |         |
 // |         |         |         |    [    |    ]    |    BSPC |----------                             |  DEL    |    !    |    @    |    #    |         |         |
